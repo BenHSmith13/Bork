@@ -6,7 +6,11 @@ verbs = {
     'grab': 'take',
     'take': 'take',
 
-    'drop': 'drop'
+    'drop': 'drop',
+
+    'look': 'inspect',
+    'inspect': 'inspect',
+    'search': 'inspect'
 }
 
 
