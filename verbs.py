@@ -1,6 +1,12 @@
 verbs = {
     "go": 'travel',
     "travel": 'travel',
+    'proceed': 'travel',
+
+    'grab': 'take',
+    'take': 'take',
+
+    'drop': 'drop'
 }
 
 

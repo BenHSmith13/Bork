@@ -6,7 +6,7 @@ import text_input
 import actions
 
 # This is the game state, your characters inventory, and your position in the world
-inventory = ()
+inventory = []
 position = {
     'floor': 1,
     'room': 'cell'
