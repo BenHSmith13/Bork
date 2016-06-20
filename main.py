@@ -1,11 +1,21 @@
 import sys
 
-# this is the file that will hande which floor you are on
+# this is the file that will handle which floor you are on
 import floors
+import text_input
+import actions
 
 # This is the game state, your characters inventory, and your position in the world
 inventory = ()
-position = floors.get_floor(1).get_room('cell')
+position = {
+    'floor': 1,
+    'room': 'cell'
+}
+
+
+def update_position(new_position):
+    global position
+    position = new_position
 
 
 def main():
@@ -13,15 +23,16 @@ def main():
 
     # The game loop, this will run over and over
     while True:
+        global position
+        room = floors.get_floor(position['floor']).get_room(position['room'])
         # tells you the details of your room
-        print(position.description())
-
+        print(room.description())
         # gets a command from the user
         command = sys.stdin.readline()
+        parsed_input = text_input.parse_command(command)
+        actions.perform_action(parsed_input, room, update_position)
 
-        # parseCommand(command)
 
-
-# runs the main function when you run the file
+# runs the main function when you run the file. Just don't worry about this bit
 if __name__ == "__main__":
     main()

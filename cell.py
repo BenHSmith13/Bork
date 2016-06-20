@@ -3,6 +3,23 @@ def description():
            'Against the bars lies a slumped over body'
 
 
+def go(direction):
+    if direction == 'north':
+        print('The view out the window is pretty bland')
+        return {
+            'floor': 1,
+            'room': 'cell'
+        }
+    if direction == 'east':
+        # easty stuff
+        return
+    else:
+        return {
+            'floor': 1,
+            'room': 'cell'
+        }
+
+
 def interactables():
     body = {
         'text': 'You inspect the body, he is dead. You find a key attached to his belt',
