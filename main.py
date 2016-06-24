@@ -4,6 +4,7 @@ import sys
 import floors
 import text_input
 import actions
+import messages
 
 # This is the game state, your characters inventory, and your position in the world
 inventory = []
@@ -19,7 +20,8 @@ def update_position(new_position):
 
 
 def main():
-    print('Welcome to Bork')
+    messages.welcome()
+    messages.mountains()
 
     # The game loop, this will run over and over
     while True:
