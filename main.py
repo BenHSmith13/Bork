@@ -25,7 +25,7 @@ def main():
     messages.bork()
     messages.mountains()
     print  # this is for an extra blank space
-    os.system('afplay ./music/SNA.mp3')
+    # os.system('afplay ./music/SNA.mp3')
 
     # The game loop, this will run over and over
     while True:
