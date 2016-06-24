@@ -21,6 +21,7 @@ def update_position(new_position):
 
 def main():
     messages.welcome()
+    messages.bork()
     messages.mountains()
 
     # The game loop, this will run over and over
