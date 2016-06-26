@@ -10,10 +10,26 @@ def go(direction):
             'floor': 1,
             'room': 'cell'
         }
-    if direction == 'east':
-        # easty stuff
-        return
+    elif direction == 'east':
+        print('This wall is made of faded bricks')
+        return {
+            'floor': 1,
+            'room': 'cell'
+        }
+    elif direction == 'south':
+        print('The door is made of strong iron. There is a body slumped aginst the other side of this door')
+        return {
+            'floor': 1,
+            'room': 'cell'
+        }
+    elif direction == 'west':
+        print('This this wall has a few bricks darker than the rest')
+        return {
+            'floor': 1,
+            'room': 'cell'
+        }
     else:
+        print('Whait, what?')
         return {
             'floor': 1,
             'room': 'cell'

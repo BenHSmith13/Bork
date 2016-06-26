@@ -10,7 +10,15 @@ verbs = {
 
     'look': 'inspect',
     'inspect': 'inspect',
-    'search': 'inspect'
+    'search': 'inspect',
+    'interact': 'interact',
+    'use': 'interact',
+    'push': 'interact',
+    'pull': 'interact',
+    'tuch': 'interact',
+    'open': 'interact',
+    'close': 'interact'
+
 }
 
 

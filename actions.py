@@ -7,10 +7,13 @@ def perform_action(command, room, update_position):
         move(subject, room, update_position)
         return
     if action == 'inspect':
+        inspect(subject, room)
         return
     if action == 'take':
         return
     if action == 'drop':
+        return
+    if action == 'interact':
         return
 
 
@@ -20,3 +23,10 @@ def move(direction, room, update_room):
         print('How do I even do that?')
         return
     update_room(room.go(direction))
+
+def inspect(subject, room):
+    if suject in room.interactables:
+        print('taco soup')
+        #do stuff
+    else:
+        print('what is that?')
