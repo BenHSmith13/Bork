@@ -24,9 +24,10 @@ def move(direction, room, update_room):
         return
     update_room(room.go(direction))
 
+
 def inspect(subject, room):
-    if suject in room.interactables:
-        print('taco soup')
-        #do stuff
+    if subject in room.interactables:
+        item = room.interactables[subject]
+        print(item['text'])
     else:
         print('what is that?')

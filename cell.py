@@ -36,17 +36,18 @@ def go(direction):
         }
 
 
-def interactables():
-    body = {
+interactables = {
+    'body': {
         'text': 'You inspect the body, he is dead. You find a key attached to his belt',
         'can_take': False,
         'can_move': False
-    }
-    key = {
+    },
+    'key': {
         'text': '',
         'can_take': False,
         'can_move': False
-    }
-    brick = {}
+    },
+    'brick': {
 
-    return body, key, brick
+    }
+}
