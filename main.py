@@ -20,12 +20,7 @@ def update_position(new_position):
     position = new_position
 
 
-def main():
-    messages.welcome()
-    messages.bork()
-    messages.mountains()
-
-    # The game loop, this will run over and over
+def game_loop():
     while True:
         global position
         room = floors.get_floor(position['floor']).get_room(position['room'])
@@ -34,7 +29,18 @@ def main():
         # gets a command from the user
         command = sys.stdin.readline()
         parsed_input = text_input.parse_command(command)
+        print
         actions.perform_action(parsed_input, room, update_position)
+        print
+
+
+def main():
+    messages.welcome()
+    messages.bork()
+    messages.mountains()
+    print
+
+    game_loop()
 
 
 # runs the main function when you run the file. Just don't worry about this bit
