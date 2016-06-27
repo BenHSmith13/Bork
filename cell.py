@@ -23,7 +23,7 @@ def go(direction):
             'room': 'cell'
         }
     elif direction == 'west':
-        print('This this wall has a few bricks darker than the rest')
+        print('someone must have broken one of the bricks')
         return {
             'floor': 1,
             'room': 'cell'
@@ -38,16 +38,17 @@ def go(direction):
 
 interactables = {
     'body': {
-        'text': 'You inspect the body, he is dead. You find a key attached to his belt',
+        'inspect': 'You inspect the body, he is dead. You find a key attached to his belt',
         'can_take': False,
         'can_move': False
     },
     'key': {
-        'text': '',
-        'can_take': False,
+        'inspect': 'It seems to be made of the same metal as the bars',
+        'take' : 'You pick up the key',
+        'can_take': True,
         'can_move': False
     },
     'brick': {
-
+        'inspect': '',
     }
 }

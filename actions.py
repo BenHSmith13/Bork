@@ -1,5 +1,5 @@
 
-def perform_action(command, room, update_position):
+def perform_action(command, room, update_position, add_to_inventory):
     action = command[0]
     subject = command[1]
 
@@ -10,6 +10,7 @@ def perform_action(command, room, update_position):
         inspect(subject, room)
         return
     if action == 'take':
+        take(subject, room, add_to_inventory)
         return
     if action == 'drop':
         return
@@ -28,6 +29,15 @@ def move(direction, room, update_room):
 def inspect(subject, room):
     if subject in room.interactables:
         item = room.interactables[subject]
-        print(item['text'])
+        print(item['inspect'])
     else:
         print('what is that?')
+
+
+def take(subject, room, add_to_inventory):
+    if subject in room.interactables:
+        item = room.interactables[subject]
+        print(item['take'])
+        add_to_inventory(item)
+    else:
+        print('I cant take that')

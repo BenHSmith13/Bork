@@ -14,6 +14,10 @@ position = {
     'room': 'cell'
 }
 
+def add_to_inventory(item):
+    global inventory
+    inventory += item
+
 
 def update_position(new_position):
     global position
@@ -30,7 +34,7 @@ def game_loop():
         command = sys.stdin.readline()
         parsed_input = text_input.parse_command(command)
         print
-        actions.perform_action(parsed_input, room, update_position)
+        actions.perform_action(parsed_input, room, update_position, add_to_inventory)
         print
 
 
