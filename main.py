@@ -14,9 +14,10 @@ position = {
     'room': 'cell'
 }
 
+
 def add_to_inventory(item):
     global inventory
-    inventory += item
+    inventory.append(item)
 
 
 def update_position(new_position):

@@ -43,8 +43,9 @@ interactables = {
         'can_move': False
     },
     'key': {
+        'name': 'key',
         'inspect': 'It seems to be made of the same metal as the bars',
-        'take' : 'You pick up the key',
+        'take': 'You pick up the key',
         'can_take': True,
         'can_move': False
     },

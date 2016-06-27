@@ -1,5 +1,6 @@
 
 def perform_action(command, room, update_position, add_to_inventory):
+    # command is a tuple that looks like this ('inspect', 'body')
     action = command[0]
     subject = command[1]
 
@@ -18,12 +19,12 @@ def perform_action(command, room, update_position, add_to_inventory):
         return
 
 
-def move(direction, room, update_room):
+def move(direction, room, update_position):
     directions = ['north', 'east', 'south', 'west', 'up', 'down']
     if direction not in directions:
         print('How do I even do that?')
         return
-    update_room(room.go(direction))
+    update_position(room.go(direction))
 
 
 def inspect(subject, room):
@@ -38,6 +39,6 @@ def take(subject, room, add_to_inventory):
     if subject in room.interactables:
         item = room.interactables[subject]
         print(item['take'])
-        add_to_inventory(item)
+        add_to_inventory({item['name']: item})
     else:
         print('I cant take that')
